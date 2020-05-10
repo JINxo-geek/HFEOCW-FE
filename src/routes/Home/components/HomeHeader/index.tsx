@@ -57,23 +57,23 @@ function HomeHeader(props: Props) {
 											active: props.currentCategory === "all",
 										})}
 									>
-										<Texty type={"left"}>全部商品</Texty>
+										<Texty type={"left"}>全部文章</Texty>
 									</li>
 									<li
-										data-category="益生君"
+										data-category="全部文章"
 										className={classnames({
-											active: props.currentCategory === "益生君",
+											active: props.currentCategory === "全部文章",
 										})}
 									>
-										<Texty type={"right"}>益生君</Texty>
+										<Texty type={"right"}>全部文章</Texty>
 									</li>
 									<li
-										data-category="天天艾"
+										data-category="zishi"
 										className={classnames({
-											active: props.currentCategory === "天天艾",
+											active: props.currentCategory === "使用姿势",
 										})}
 									>
-										<Texty type={"left"}>天天艾</Texty>
+										<Texty type={"left"}>使用姿势</Texty>
 									</li>
 									<li
 										data-category="101轻体日记"
@@ -81,7 +81,7 @@ function HomeHeader(props: Props) {
 											active: props.currentCategory === "101轻体日记",
 										})}
 									>
-										<Texty type={"right"}>101轻体日记</Texty>
+										<Texty type={"right"}>桌椅要求</Texty>
 									</li>
 									<li
 										data-category="暖暖灸"
@@ -89,15 +89,15 @@ function HomeHeader(props: Props) {
 											active: props.currentCategory === "暖暖灸",
 										})}
 									>
-										<Texty type={"left"}>暖暖灸</Texty>
+										<Texty type={"left"}>显示器要求</Texty>
 									</li>
 									<li
-										data-category="小花样"
+										data-category="环境"
 										className={classnames({
 											active: props.currentCategory === "小花样",
 										})}
 									>
-										<Texty type={"right"}>小花样</Texty>
+										<Texty type={"right"}>环境</Texty>
 									</li>
 								</ul>
 
