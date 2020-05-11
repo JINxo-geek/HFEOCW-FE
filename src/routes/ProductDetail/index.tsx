@@ -66,6 +66,30 @@ function handleSubmitDetail() {
 	}
 }
 function DetailProduct(props: Props) {
+
+	        //cid,aid映射表
+        const bilibiliList = [{
+            name:"使用者姿势",
+            aid:'92544197',
+            cid:'158008350'
+        },
+        {name:"桌椅要求",
+        aid:"9873084",
+        cid:"16322867"
+        }
+    ];
+        const bilibili = {
+            aid:'',cid:''
+        };
+        
+        bilibiliList.forEach(item=>{
+            if(item.name ==  props.product.title){
+                bilibili.aid = item.aid;
+                bilibili.cid = item.cid;
+            }
+        });
+        var bsrc = `https://player.bilibili.com/player.html?aid=${bilibili.aid}&cid=${bilibili.cid}&page=1&as_wide=1&high_quality=1&danmaku=`
+	console.log('bsrc',bsrc);
 	useEffect(() => {
 		const id = props.match.params.id;
 		props.getProductsDetails(id);
@@ -139,7 +163,7 @@ function DetailProduct(props: Props) {
 
 	return (
 		<>
-			<Nav history={props.history}>商品详情</Nav>
+			<Nav history={props.history}>资料详情</Nav>
 			<div id="backTop" onClick={backtopFunc} className={backTopState ? "visible" : ""}>
 				<Icon type="up"></Icon>
 			</div>
@@ -173,13 +197,16 @@ function DetailProduct(props: Props) {
 						}}
 						ref={detailRef}
 					>
-				
-					<div> <iframe style={{border:0,width:"100%",height:250,	marginTop: -63}} src="https://player.bilibili.com/player.html?aid=97613422&cid=173030787&page=1&as_wide=1&high_quality=1&danmaku="/></div>
+                  <div>
+ <iframe style={{border:0,width:"100%",
+height:250, marginTop: -63
+}} src={bsrc} />
 
+ </div>
 						<div className="detail-product-middle">
 							<div className="detail-product-title">{props.product.title}</div>
 							<div className="detail-product-price">
-								{/* <div>￥{props.product.price}元</div> */}
+							<div>舒适度值为:{props.product.price}</div>
 								<div>
 									<Icon
 										type="heart"
@@ -191,11 +218,11 @@ function DetailProduct(props: Props) {
 										onClick={() => handleSubmit(props.product)}
 										className="bounceButton"
 									>
-										完成布置
+										 完成布置
 									</Button>
 								</div>
 							</div>
-							<div>{props.data.texty}</div>
+							 <div style={{fontSize:19}}>{props.data.texty}</div>
 						</div>
 						<div className="detail-product-provoke">
 							{props.data.footerpic.map((item: string, index: number) => (

@@ -62,7 +62,7 @@ function ProfileReceive(props: Props) {
 	};
 	return (
 		<>
-			<Nav history={props.history}>我的地址簿</Nav>
+			<Nav history={props.history}>任务清单</Nav>
 			<div className="profile-receive-container">
 				<div className="profile-receive-maincontrol">
 					{props.user &&
@@ -76,7 +76,7 @@ function ProfileReceive(props: Props) {
 											checked={checkBox[index] ? checkBox[index] : false}
 											id={"checkbox" + index}
 										/>
-										<label htmlFor={"checkbox" + index}>设为默认</label>
+										<label htmlFor={"checkbox" + index}>设为紧急任务</label>
 									</div>
 									<div className="profile-receive-title">
 										<span className="profile-receive-name">{item.name}</span>
@@ -98,7 +98,7 @@ function ProfileReceive(props: Props) {
 						className="addbutton"
 						onClick={() => props.history.push("/profilereceiveadd")}
 					>
-						添加地址
+						添加任务
 					</div>
 				</div>
 			</div>

@@ -16,7 +16,7 @@ type Props = PropsWithChildren<
 function Cart(props: Props) {
 	const columns: ColumnProps<CartItem>[] = [
 		{
-			title: "商品",
+			title: "资料",
 			dataIndex: "product",
 			align: "center",
 			width: "2rem",
@@ -27,7 +27,7 @@ function Cart(props: Props) {
 			),
 		},
 		{
-			title: "单价",
+			title: "舒适度",
 			dataIndex: "price",
 			align: "center",
 			render: (text: undefined, row: CartItem) => (
@@ -36,29 +36,29 @@ function Cart(props: Props) {
 				</>
 			),
 		},
-		{
-			title: "数量",
-			dataIndex: "count",
-			align: "center",
-			render: (text: number, row: CartItem) => (
-				<>
-					<InputNumber
-						min={1}
-						value={text}
-						onChange={(value) => {
-							props.changeCartItem(row.product.id, value);
-						}}
-					></InputNumber>
-				</>
-			),
-		},
+		// {
+		// 	title: "数量",
+		// 	dataIndex: "count",
+		// 	align: "center",
+		// 	render: (text: number, row: CartItem) => (
+		// 		<>
+		// 			<InputNumber
+		// 				min={1}
+		// 				value={text}
+		// 				onChange={(value) => {
+		// 					props.changeCartItem(row.product.id, value);
+		// 				}}
+		// 			></InputNumber>
+		// 		</>
+		// 	),
+		// },
 		{
 			title: "操作",
 			align: "center",
 			render: (text: number, row: CartItem) => (
 				<>
 					<Popconfirm
-						title="是否删除商品"
+						title="是否删除"
 						onConfirm={() => props.removeCartItem(row.product.id)}
 						okText="是"
 						cancelText="否"
@@ -95,29 +95,29 @@ function Cart(props: Props) {
 	};
 	return (
 		<>
-			<Nav history={props.history}>购物车</Nav>
+			<Nav history={props.history}>完成部署</Nav>
 			<Table
 				columns={columns}
 				dataSource={props.cart}
 				pagination={false}
 				rowSelection={rowSelection}
 				rowKey={(record: CartItem) => record.key}
-				locale={{ emptyText: "购物车竟然是空的。。" }}
+				locale={{ emptyText: "未完成" }}
 				className="cart-table"
 			></Table>
 			<div className="cart-footer">
 				<div className="settle">
 					<div>
-						<Button onClick={props.clearCartItem}>清空购物车</Button>
+						<Button onClick={props.clearCartItem}>清空部署</Button>
 					</div>
 					<div>
-						<div>已选择了{checkNumber}件商品</div>
-						<div>总价 {totalPrice}元</div>
+						<div>已完成{checkNumber}件部署</div>
+						<div>舒适度值为{totalPrice}</div>
 					</div>
 				</div>
-				<div className="charge">
+				{/* <div className="charge">
 					<Button onClick={judgeSettle}>结算</Button>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);

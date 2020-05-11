@@ -57,7 +57,7 @@ function HomeHeader(props: Props) {
 											active: props.currentCategory === "all",
 										})}
 									>
-										<Texty type={"left"}>全部文章</Texty>
+										<Texty type={"left"}>全部资料</Texty>
 									</li>
 									<li
 										data-category="设备"

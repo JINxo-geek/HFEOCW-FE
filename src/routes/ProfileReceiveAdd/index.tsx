@@ -17,19 +17,19 @@ const mapStateToProps = (state: CombinedState): ProfileState => state.profile;
 
 function Validate(formState: UserReceive) {
 	if (formState.name === "") {
-		message.error("收货人未填写");
+		message.error("任务未填写");
 		return false;
 	}
 	if (formState.phoneNumber === "") {
-		message.error("电话号码未填");
+		message.error("任务时间未填写");
 		return false;
 	}
 	if (formState.distinct === "") {
-		message.error("地址未填");
+		message.error("地址未填写");
 		return false;
 	}
 	if (formState.distinctDetail === "") {
-		message.error("地址详情未填");
+		message.error("备注未填写");
 		return false;
 	}
 	return true;
@@ -59,14 +59,14 @@ function ProfileReceiveAdd(props: Props) {
 	};
 	return (
 		<>
-			<Nav history={props.history}>添加地址</Nav>
+			<Nav history={props.history}>任务细节</Nav>
 			<form className="profile-receive-form">
 				<div className="profile-receive-item">
 					<input
 						type="text"
 						onChange={(e) => setFormState({ ...formState, name: e.target.value })}
 						value={formState.name}
-						placeholder={"收货人"}
+						placeholder={"任务名称"}
 					/>
 				</div>
 				<div className="profile-receive-item">
@@ -76,7 +76,7 @@ function ProfileReceiveAdd(props: Props) {
 							setFormState({ ...formState, phoneNumber: e.target.value })
 						}
 						value={formState.phoneNumber}
-						placeholder={"联系电话"}
+						placeholder={"截至时间"}
 					/>
 				</div>
 
@@ -86,7 +86,7 @@ function ProfileReceiveAdd(props: Props) {
 							color: formState.distinct ? "#e88e30" : "rgba(222, 170, 154, 0.99)",
 						}}
 					>
-						{formState.distinct ? formState.distinct : "所在地区"}
+						{formState.distinct ? formState.distinct : "任务地点"}
 					</span>
 				</div>
 
@@ -97,7 +97,7 @@ function ProfileReceiveAdd(props: Props) {
 							setFormState({ ...formState, distinctDetail: e.target.value })
 						}
 						value={formState.distinctDetail}
-						placeholder={"详细地址"}
+						placeholder={"任务备注"}
 					/>
 				</div>
 

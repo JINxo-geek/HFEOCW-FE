@@ -9,28 +9,28 @@ function ProfileCollection() {
 			<div className="profile-search">
 				<Link to="/search">
 					<Icon type="search"></Icon>
-					<span>搜索商品</span>
+					<span>搜索资料</span>
 				</Link>
 			</div>
 			<div className="profile-list">
-				<Link to="/profilepackage">
+				{/* <Link to="/profilepackage">
 					<div className="profile-lis">
 						<Icon type="gift"></Icon>
 						<span> 包裹状态</span>
 					</div>
 					<Icon type="right"></Icon>
-				</Link>
+				</Link> */}
 				<Link to="/profilereceive">
 					<div className="profile-lis">
 						<Icon type="audit"></Icon>
-						<span> 我的地址簿</span>
+						<span> 任务清单</span>
 					</div>
 					<Icon type="right"></Icon>
 				</Link>
 				<Link to="/cart">
 					<div className="profile-lis">
 						<Icon type="shopping-cart"></Icon>
-						<span> 我的购物车</span>
+						<span> 已完成</span>
 					</div>
 					<Icon type="right"></Icon>
 				</Link>
