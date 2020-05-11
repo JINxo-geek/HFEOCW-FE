@@ -13,7 +13,7 @@ function Tabs(props: Props) {
 		<footer>
 			<NavLink exact to="/">
 				<Icon type="shopping"></Icon>
-				<span>商品</span>
+				<span>文章</span>
 			</NavLink>
 			<NavLink exact to="/search">
 				<Icon type="search"></Icon>
@@ -22,7 +22,7 @@ function Tabs(props: Props) {
 			<NavLink exact to="/cart">
 				<Badge count={props.cart.reduce((prev, next) => prev + next.count, 0)}>
 					<Icon type="shopping-cart"></Icon>
-					<span>购物车</span>
+					<span>收藏</span>
 				</Badge>
 			</NavLink>
 			<NavLink exact to="/profile">

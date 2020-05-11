@@ -60,12 +60,12 @@ function HomeHeader(props: Props) {
 										<Texty type={"left"}>全部文章</Texty>
 									</li>
 									<li
-										data-category="全部文章"
+										data-category="设备"
 										className={classnames({
-											active: props.currentCategory === "全部文章",
+											active: props.currentCategory === "设备",
 										})}
 									>
-										<Texty type={"right"}>全部文章</Texty>
+										<Texty type={"right"}>设备</Texty>
 									</li>
 									<li
 										data-category="zishi"
@@ -76,17 +76,17 @@ function HomeHeader(props: Props) {
 										<Texty type={"left"}>使用姿势</Texty>
 									</li>
 									<li
-										data-category="101轻体日记"
+										data-category="桌椅要求"
 										className={classnames({
-											active: props.currentCategory === "101轻体日记",
+											active: props.currentCategory === "桌椅要求",
 										})}
 									>
 										<Texty type={"right"}>桌椅要求</Texty>
 									</li>
 									<li
-										data-category="暖暖灸"
+										data-category="显示器要求"
 										className={classnames({
-											active: props.currentCategory === "暖暖灸",
+											active: props.currentCategory === "显示器要求",
 										})}
 									>
 										<Texty type={"left"}>显示器要求</Texty>
@@ -94,7 +94,7 @@ function HomeHeader(props: Props) {
 									<li
 										data-category="环境"
 										className={classnames({
-											active: props.currentCategory === "小花样",
+											active: props.currentCategory === "环境",
 										})}
 									>
 										<Texty type={"right"}>环境</Texty>

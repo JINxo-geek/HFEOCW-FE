@@ -173,21 +173,13 @@ function DetailProduct(props: Props) {
 						}}
 						ref={detailRef}
 					>
-						<div className="detail-product-slider">
-							<Carousel lazyLoad="progressive">
-								{props.data.sliderpic.map((item: string, index: number) => {
-									return (
-										<div key={props.product.id + index}>
-											<img src={item} onLoad={sliderload} />
-										</div>
-									);
-								})}
-							</Carousel>
-						</div>
+				
+					<div> <iframe style={{border:0,width:"100%",height:250,	marginTop: -63}} src="https://player.bilibili.com/player.html?aid=97613422&cid=173030787&page=1&as_wide=1&high_quality=1&danmaku="/></div>
+
 						<div className="detail-product-middle">
 							<div className="detail-product-title">{props.product.title}</div>
 							<div className="detail-product-price">
-								<div>￥{props.product.price}元</div>
+								{/* <div>￥{props.product.price}元</div> */}
 								<div>
 									<Icon
 										type="heart"
@@ -199,7 +191,7 @@ function DetailProduct(props: Props) {
 										onClick={() => handleSubmit(props.product)}
 										className="bounceButton"
 									>
-										加入购物车
+										完成布置
 									</Button>
 								</div>
 							</div>
@@ -209,6 +201,17 @@ function DetailProduct(props: Props) {
 							{props.data.footerpic.map((item: string, index: number) => (
 								<img src={item} key={props.product.id + index} />
 							))}
+						</div>
+						<div className="detail-product-slider">
+							<Carousel lazyLoad="progressive">
+								{props.data.sliderpic.map((item: string, index: number) => {
+									return (
+										<div key={props.product.id + index}>
+											<img src={item} onLoad={sliderload} />
+										</div>
+									);
+								})}
+							</Carousel>
 						</div>
 					</div>
 				</>

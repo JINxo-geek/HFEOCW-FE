@@ -16,6 +16,7 @@ type Props = PropsWithChildren<
 >;
 
 function Home(props: Props) {
+	console.log('Home',props);
 	const homeContainer: React.RefObject<HTMLDivElement> = useRef(null);
 	const refresh: React.RefObject<HTMLDivElement> = useRef(null);
 	const [loading, setLoading] = useState(true);

@@ -14,6 +14,7 @@ type Props = PropsWithChildren<{
 }>;
 
 function HomeProduct(props: Props) {
+console.log('HomeProduct',props)
 	const [io, setIo] = useState<IntersectionObserver>(); //实测可能不兼容safari
 
 	const opts = {
@@ -36,6 +37,7 @@ function HomeProduct(props: Props) {
 	useEffect(() => {
 		setIo(new IntersectionObserver(callback, opts));
 		if (props.renderProduct.productList.length == 0) {
+			//拉取文章列表
 			props.getProducts();
 		}
 		window.addEventListener("resize", setRootFunc, false);
@@ -63,7 +65,7 @@ function HomeProduct(props: Props) {
 		<QueueAnim delay={200}>
 			<div className="home-product-list" key="list">
 				<h2 key="home-product-list-h2">
-					{props.currentCategory == "all" ? "全部商品" : props.currentCategory}
+					{props.currentCategory == "all" ? "全部" : props.currentCategory}
 				</h2>
 
 				{
@@ -107,7 +109,7 @@ function HomeProduct(props: Props) {
 									>
 										<Card.Meta
 											title={item.title}
-											description={`价格：${item.price}元`}
+											// description={`价格：${item.price}元`}
 										/>
 									</Card>
 								</Link>
