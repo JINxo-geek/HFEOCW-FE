@@ -27,7 +27,7 @@ module.exports = (env) => {
             alias: {
                 "@": path.resolve(__dirname, 'src'),
                 "~": path.resolve(__dirname, 'node_modules'),
-                '@ant-design/icons/lib/dist$': path.resolve(__dirname, 'src/icon.ts'),
+                // '@ant-design/icons/lib/dist$': path.resolve(__dirname, 'src/icon.ts'),
             },
             extensions: ['.ts', '.tsx', '.js', '.json']
         },
