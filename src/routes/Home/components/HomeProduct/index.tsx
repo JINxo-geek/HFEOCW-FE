@@ -108,8 +108,9 @@ console.log('HomeProduct',props)
 										}
 									>
 										<Card.Meta
-											title={item.title}
-											// description={`价格：${item.price}元`}
+											title={<div  style={{textAlign:"center",fontSize:16,color:"#52a7f7",margin:-3}}>{item.title}</div>}
+											description={<div style={{textAlign:"center",color:"#f5286d"}}>{`舒适度为：${item.price}`}</div>}
+											
 										/>
 									</Card>
 								</Link>

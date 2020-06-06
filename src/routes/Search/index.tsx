@@ -114,7 +114,7 @@ function Search(props: Props) {
 								<img src={item.poster} />
 								<div className="search-item-title">
 									<div>{item.title}</div>
-									<div>￥{item.price}</div>
+									<div>{item.price}</div>
 									<div className="search-item-tag">标签：{item.category}</div>
 								</div>
 							</Link>

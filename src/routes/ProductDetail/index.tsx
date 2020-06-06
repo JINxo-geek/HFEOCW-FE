@@ -222,7 +222,8 @@ height:250, marginTop: -63
 									</Button>
 								</div>
 							</div>
-							 <div style={{fontSize:19}}>{props.data.texty}</div>
+							 <div style={{fontSize:19,color: "#ebeef3",
+    background: "rgba(23, 141, 250, 0.2)"}}>{props.data.texty}</div>
 						</div>
 						<div className="detail-product-provoke">
 							{props.data.footerpic.map((item: string, index: number) => (

@@ -56,7 +56,7 @@ function ProfileCollection(props: Props) {
 									<img src={item.poster} />
 									<div className="profile-collect-text">
 										<div>{item.title}</div>
-										<div>￥{item.price}</div>
+										<div>{item.price}</div>
 									</div>
 								</Link>
 							</div>

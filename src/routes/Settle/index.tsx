@@ -95,7 +95,7 @@ function Settle(props: Props) {
 													<div className="settle-item-title">
 														{item.product.title}
 													</div>
-													<div>价格：￥{item.product.price}</div>
+													<div>{item.product.price}</div>
 													<div className="settle-change">
 														数量：
 														<InputNumber

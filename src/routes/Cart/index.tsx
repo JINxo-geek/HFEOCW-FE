@@ -32,7 +32,7 @@ function Cart(props: Props) {
 			align: "center",
 			render: (text: undefined, row: CartItem) => (
 				<>
-					<p>￥{row.product.price}</p>
+					<p>{row.product.price}</p>
 				</>
 			),
 		},

@@ -55,6 +55,11 @@ ReactDOM.render(
 								component={lazy(() => import("@/routes/ProfileHistory"))}
 							></Route>
 							<Route
+								path="/profilehistory2"
+								exact
+								component={lazy(() => import("@/routes/ProfileHistory2"))}
+							></Route>
+							<Route
 								path="/profilereceive"
 								exact
 								component={lazy(() => import("@/routes/ProfileReceive"))}

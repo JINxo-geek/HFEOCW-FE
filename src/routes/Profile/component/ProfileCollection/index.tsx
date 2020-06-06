@@ -48,6 +48,13 @@ function ProfileCollection() {
 					</div>
 					<Icon type="right"></Icon>
 				</Link>
+				<Link to="/profilehistory2">
+					<div className="profile-lis">
+						<Icon type="history"></Icon>
+						<span> 番茄钟和白噪音</span>
+					</div>
+					<Icon type="right"></Icon>
+				</Link>
 			</div>
 		</div>
 	);
