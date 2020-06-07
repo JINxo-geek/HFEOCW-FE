@@ -1,55 +1,11 @@
 
 
-# 基于Express与React制作的pwa小电商
+# 基于PWA和人因工程的效率管理应用
 
 
 ## 项目介绍
-- 此项目有2部分组成，前端仓库地址为 https://github.com/yehuozhili/shop100frontend ，后端仓库地址为  https://github.com/yehuozhili/shop100backend 。
-- 前后端都由我一个人完成，无设计稿，图片自己网上找的，使用rem适配，css写的有点乱，后端测试部分未写完。
-- 写这个主要也是自己学习用，因为我自己在里面也手写了很多功能，下面项目特色会展示出来。
-- 项目最后部署我是使用https发挥pwa威力，不然在http下pwa没有多少意义。不过部署后感觉第一次访问网站有点墨迹，跟一开始本地跑速度差的有点多，还有很大优化空间。不过后续访问会有serviceworker执行缓存就会快很多了。
-- 这里还要感谢下教我技术的老师，特别是张仁阳老师和姜文老师，我的react和张仁阳老师学的，基础部分和姜文老师学的，本来我连个手写promise都搞不懂到底怎么回事，以为自己可能不适合搞这个，后来一次公开课听了姜文老师那节promise给我很大的信心。
+- 信息化办公已经成为当今普遍现象，长期待在电脑前办公浮现出了各种弊端，在忙碌的工作中很难意识到自己的办公环境存在什么问题，所以迫切需要一个能帮助改善的方法。本文利用渐进式增强WEB应用（简称PWA）更强大的传播普及性，结合人因工程的知识原理来使机器和环境能够适应人的需求,从而帮助更多的人提高工作和生成效率,保障人的健康、安全和舒适。具体方法为设计并开发一款渐进式增强WEB应用程序，在程序中引导人进行符合人因工程学的工作环境的部署,并搭配番茄种和任务清单等效率辅助功能,管理人的环境部署及任务时间安排,提高办公效率。目的是让使用该应用程序的用户的人机环境系统达到一个理想状态,从而能够高效健康地工作。
 
-## 项目特色
-
-- 手写的虚拟化列表组件，在历史记录和首页处使用了这组件
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/virtualize.gif" />
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/history.gif" />
-
-- 登录注册，地址功能，收藏功能，购物车小动画，加载页面动画等，为了方便改造，注册完可以直接登录。
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/address.gif" />
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/distinct.gif" />
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/collect.gif" />
-
-- 搜索带自动补全功能，虽然我感觉我这实现没写好。
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/search.gif" />
-
-
-- pwa安装应用
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/pwainstall.jpg" />
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/pwainstall.gif" />
-
-- pwa离线缓存
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/pwacache.gif" />
-
-- 手写分片上传，后来没有采用，但是前后端代码都保留着。
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/sliceupload.gif" />
-
-- 自定义hook解决安卓机键盘遮挡
-
-<img src="https://github.com/yehuozhili/shop100frontend/blob/master/demo/usekeyboard.gif" />
-
-
-## 线上体验地址
-
-https://www.yehuozhili.xyz:5677/#/
 
 ## 项目使用
 - 下载前后端项目后进行npm install安装，命令在package.json里都有。
@@ -123,9 +79,3 @@ https://www.yehuozhili.xyz:5677/#/
 └─utils        --- 通用逻辑
 ```
 
-
-## 需要改造点
-- 1、登录注册部分未验证邮箱。
-- 2、首页图片太大太多以及逻辑太多，需要精简，加快首页渲染时间。
-- 3、支付后面逻辑未写。
-- 4、包裹查询逻辑未写。
