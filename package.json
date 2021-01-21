@@ -36,7 +36,7 @@
     "classnames": "^2.2.6",
     "connected-react-router": "^6.7.0",
     "copy-webpack-plugin": "^5.1.1",
-    "immer": "^5.3.6",
+    "immer": "^8.0.1",
     "qs": "^6.9.1",
     "rc-queue-anim": "^1.8.3",
     "rc-texty": "^0.2.0",
